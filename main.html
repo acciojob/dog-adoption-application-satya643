@@ -1,11 +1,110 @@
-Dog Adoption Application
-Ritesh is your friend and wants to adopt a dog. You need to create a form for him to submit his application. The form should contain the following fields and should adhere to the specified requirements:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dog Adoption Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f6f9fc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-Field	ID	Type	Placeholder	Other Details
-Name	name	text	Name	
-Phone Number	phone	text	Phone Number	
-Address	address	text	Address	
-Have you ever lived with a Dog before?	checkbox	checkbox		Value should be: "Have you ever lived with a Dog before?"
-Please select your preferred breeds	multiSelect	select		Make this as a multi-select box with at least 3 options
-Submit	submit	submit		Value should be: "Submit"
-Please ensure that all the inputs are encapsulated within a form tag. Make sure to apply appropriate CSS to make the form visually appealing.
+    .form-container {
+      background-color: #fff;
+      padding: 25px 35px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    form label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+
+    form input[type="text"],
+    form select {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    form select[multiple] {
+      height: 100px;
+    }
+
+    form .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    form .checkbox-group input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    form input[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 0;
+      font-size: 16px;
+      margin-top: 20px;
+      border-radius: 6px;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Dog Adoption Application</h2>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Name" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" placeholder="Phone Number" required>
+
+      <label for="address">Address</label>
+      <input type="text" id="address" placeholder="Address" required>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="checkbox" value="Have you ever lived with a Dog before?">
+        <label for="checkbox">Have you ever lived with a Dog before?</label>
+      </div>
+
+      <label for="multiSelect">Please select your preferred breeds</label>
+      <select id="multiSelect" multiple>
+        <option>Golden Retriever</option>
+        <option>Labrador</option>
+        <option>German Shepherd</option>
+        <option>Beagle</option>
+        <option>Pug</option>
+      </select>
+
+      <input type="submit" id="submit" value="Submit">
+    </form>
+  </div>
+
+</body>
+</html>
